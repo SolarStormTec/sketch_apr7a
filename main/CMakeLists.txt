@@ -1,0 +1,48 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "system/sys_manager.c"
+        "system/task_manager.c"
+        "config/config_mgr.c"
+        "config/nvs_storage.c"
+        "engine/engine_ctrl.c"
+        "engine/stepper_motor.c"
+        "sensors/sensor_mgr.c"
+        "battery/bq40z50.c"
+        "cloud/onenet_mqtt.c"
+        "cloud/wifi_manager.c"
+        "display/st7789_driver.c"
+        "ota/ota_manager.c"
+        "utils/event_system.c"
+        
+    INCLUDE_DIRS 
+        "."
+        "include"
+        "system"
+        "config"
+        "engine"
+        "sensors"
+        "battery"
+        "cloud"
+        "display"
+        "ota"
+        "utils"
+        
+    REQUIRES 
+        driver
+        esp_wifi
+        esp_netif
+        esp_http_client
+        esp_https_ota
+        app_update
+        mqtt
+        nvs_flash
+        spi_flash
+        freertos
+        esp_timer
+        esp_adc
+        mbedtls
+        json
+        esp_lcd
+        fatfs
+) 

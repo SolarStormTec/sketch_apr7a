@@ -1,0 +1,20 @@
+Command: ninja flash
+[1/5] cd /Users/mac/Documents/Arduino/sketch_apr7a/build/esp-idf/esptool_py && /Users/mac/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/mac/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /Users/mac/Documents/Arduino/sketch_apr7a/build/partition_table/partition-table.bin /Users/mac/Documents/Arduino/sketch_apr7a/build/smartjet_v2.bin
+smartjet_v2.bin binary size 0xf7940 bytes. Smallest app partition is 0x100000 bytes. 0x86c0 bytes (3%) free.
+Warning: The smallest app partition is nearly full (3% free space left)!
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /Users/mac/Documents/Arduino/sketch_apr7a/build/bootloader/esp-idf/esptool_py && /Users/mac/.espressif/python_env/idf5.5_py3.12_env/bin/python /Users/mac/esp/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x0 /Users/mac/Documents/Arduino/sketch_apr7a/build/bootloader/bootloader.bin
+Bootloader binary size 0x5320 bytes. 0x2ce0 bytes (35%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /Users/mac/esp/esp-idf/components/esptool_py && /Users/mac/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/mac/esp/esp-idf -D "SERIAL_TOOL=/Users/mac/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/Users/mac/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/mac/Documents/Arduino/sketch_apr7a/build -P /Users/mac/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32s3 -p /dev/cu.usbmodem11301 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 80m --flash_size 2MB 0x0 bootloader/bootloader.bin 0x10000 smartjet_v2.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.9.dev5
+Serial port /dev/cu.usbmodem11301
+
+A fatal error occurred: Could not open /dev/cu.usbmodem11301, the port is busy or doesn't exist.
+([Errno 35] Could not exclusively lock port /dev/cu.usbmodem11301: [Errno 35] Resource temporarily unavailable)
+
+FAILED: CMakeFiles/flash /Users/mac/Documents/Arduino/sketch_apr7a/build/CMakeFiles/flash 
+cd /Users/mac/esp/esp-idf/components/esptool_py && /Users/mac/.espressif/tools/cmake/3.30.2/CMake.app/Contents/bin/cmake -D IDF_PATH=/Users/mac/esp/esp-idf -D "SERIAL_TOOL=/Users/mac/.espressif/python_env/idf5.5_py3.12_env/bin/python;;/Users/mac/esp/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32s3" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/Users/mac/Documents/Arduino/sketch_apr7a/build -P /Users/mac/esp/esp-idf/components/esptool_py/run_serial_tool.cmake
+ninja: build stopped: subcommand failed.

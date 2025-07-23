@@ -1,0 +1,76 @@
+{
+    "configurations": [
+        {
+            "name": "ESP-IDF",
+            "compilerPath": "/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "includePath": [
+                "${workspaceFolder}/main",
+                "${workspaceFolder}/main/include",
+                "${workspaceFolder}/main/system",
+                "${workspaceFolder}/main/config",
+                "${workspaceFolder}/main/engine",
+                "${workspaceFolder}/main/sensors",
+                "${workspaceFolder}/main/battery",
+                "${workspaceFolder}/main/cloud",
+                "${workspaceFolder}/main/display",
+                "${workspaceFolder}/main/ota",
+                "${workspaceFolder}/main/utils",
+                "${workspaceFolder}/build/config",
+                "/Users/mac/esp/esp-idf/components/newlib/platform_include",
+                "/Users/mac/esp/esp-idf/components/freertos/config/include",
+                "/Users/mac/esp/esp-idf/components/freertos/FreeRTOS-Kernel/include",
+                "/Users/mac/esp/esp-idf/components/esp_hw_support/include",
+                "/Users/mac/esp/esp-idf/components/esp_common/include",
+                "/Users/mac/esp/esp-idf/components/esp_system/include",
+                "/Users/mac/esp/esp-idf/components/esp_wifi/include",
+                "/Users/mac/esp/esp-idf/components/esp_event/include",
+                "/Users/mac/esp/esp-idf/components/nvs_flash/include",
+                "/Users/mac/esp/esp-idf/components/driver/deprecated",
+                "/Users/mac/esp/esp-idf/components/esp_driver_gpio/include",
+                "/Users/mac/esp/esp-idf/components/esp_driver_uart/include",
+                "/Users/mac/esp/esp-idf/components/esp_driver_i2c/include",
+                "/Users/mac/esp/esp-idf/components/esp_driver_spi/include",
+                "/Users/mac/esp/esp-idf/components/esp_adc/include",
+                "/Users/mac/esp/esp-idf/components/esp_timer/include",
+                "/Users/mac/esp/esp-idf/components/log/include",
+                "/Users/mac/esp/esp-idf/components/soc/include",
+                "/Users/mac/esp/esp-idf/components/soc/esp32s3/include",
+                "/Users/mac/esp/esp-idf/components/hal/include",
+                "/Users/mac/esp/esp-idf/components/hal/esp32s3/include",
+                "/Users/mac/esp/esp-idf/components/esp_https_ota/include",
+                "/Users/mac/esp/esp-idf/components/mqtt/esp-mqtt/include",
+                "/Users/mac/esp/esp-idf/components/json/cJSON"
+            ],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "/Users/mac/esp/esp-idf/components"
+                ],
+                "limitSymbolsToIncludedHeaders": false
+            },
+            "defines": [
+                "ESP_PLATFORM",
+                "IDF_VER=\"v5.5-dev-1998-gc71d74e2f8\"",
+                "MBEDTLS_CONFIG_FILE=\"mbedtls/esp_config.h\"",
+                "SOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE", 
+                "SOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+                "_GLIBCXX_HAVE_POSIX_SEMAPHORE",
+                "_GLIBCXX_USE_POSIX_SEMAPHORE",
+                "_GNU_SOURCE",
+                "_POSIX_READER_WRITER_LOCKS"
+            ],
+            "compilerArgs": [
+                "-mlongcalls",
+                "-fno-builtin-memcpy",
+                "-fno-builtin-memset", 
+                "-fno-builtin-bzero",
+                "-fno-builtin-stpcpy",
+                "-fno-builtin-strncpy"
+            ],
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": 4
+} 

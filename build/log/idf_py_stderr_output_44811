@@ -1,0 +1,1 @@
+Command: cmake -G Ninja -DPYTHON_DEPS_CHECKED=1 -DPYTHON=/Users/mac/.espressif/python_env/idf5.5_py3.12_env/bin/python -DESP_PLATFORM=1 -DSDKCONFIG='/Users/mac/Documents/Arduino/sketch_apr7a/sdkconfig' -DCCACHE_ENABLE=1 /Users/mac/Documents/Arduino/sketch_apr7a

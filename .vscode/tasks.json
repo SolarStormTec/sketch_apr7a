@@ -1,0 +1,97 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build - Build project",
+            "type": "shell",
+            "command": "idf.py build",
+            "windows": {
+                "command": "idf.py build"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        },
+        {
+            "label": "Set ESP-IDF Target",
+            "type": "shell",
+            "command": "idf.py set-target esp32s3",
+            "windows": {
+                "command": "idf.py set-target esp32s3"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Clean - Clean the project",
+            "type": "shell",
+            "command": "idf.py clean",
+            "windows": {
+                "command": "idf.py clean"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Flash - Flash the device",
+            "type": "shell",
+            "command": "idf.py -p /dev/tty.SLAB_USBtoUART flash",
+            "windows": {
+                "command": "idf.py -p COM3 flash"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Monitor - Monitor the device",
+            "type": "shell",
+            "command": "idf.py -p /dev/tty.SLAB_USBtoUART monitor",
+            "windows": {
+                "command": "idf.py -p COM3 monitor"
+            },
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "OpenOCD - Start the OpenOCD server",
+            "type": "shell",
+            "command": "openocd -f board/esp32s3-builtin.cfg",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared"
+            },
+            "group": "build"
+        }
+    ]
+} 

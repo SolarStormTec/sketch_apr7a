@@ -1,0 +1,84 @@
+{
+    // ESP-IDF 核心配置
+    "idf.espIdfPath": "/Users/mac/esp/esp-idf",
+    "idf.espIdfPathWin": "/Users/mac/esp/esp-idf",
+    "idf.pythonBinPath": "/Users/mac/.espressif/python_env/idf5.5_py3.13_env/bin/python",
+    "idf.pythonBinPathWin": "/Users/mac/.espressif/python_env/idf5.5_py3.13_env/bin/python",
+    "idf.toolsPath": "/Users/mac/.espressif",
+    "idf.toolsPathWin": "/Users/mac/.espressif",
+    
+    // 项目配置
+    "idf.port": "/dev/tty.usbmodem11301",
+    "idf.portWin": "COM3",
+    "idf.target": "esp32s3",
+    "idf.flashType": "UART",
+    "idf.openOcdConfigs": [
+        "board/esp32s3-builtin.cfg"
+    ],
+    
+    // 编译和调试配置
+    "idf.adapterTargetName": "esp32s3",
+    "idf.customExtraPaths": "/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin:/Users/mac/.espressif/tools/xtensa-esp-elf-gdb/14.2_20240403/xtensa-esp-elf-gdb/bin:/Users/mac/.espressif/tools/riscv32-esp-elf/esp-14.2.0_20241119/riscv32-esp-elf/bin:/Users/mac/.espressif/tools/riscv32-esp-elf-gdb/14.2_20240403/riscv32-esp-elf-gdb/bin:/Users/mac/.espressif/tools/esp32ulp-elf/2.38_20240113/esp32ulp-elf/bin:/Users/mac/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240821/openocd-esp32/bin:/Users/mac/.espressif/python_env/idf5.5_py3.13_env/bin",
+    "idf.customExtraVars": {
+        "OPENOCD_SCRIPTS": "/Users/mac/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240821/openocd-esp32/share/openocd/scripts",
+        "IDF_CCACHE_ENABLE": "1"
+    },
+    
+    // C/C++ 智能感知配置
+    "C_Cpp.default.compilerPath": "/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin/xtensa-esp32s3-elf-gcc",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.cppStandard": "c++17",
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/main",
+        "${workspaceFolder}/main/include",
+        "${workspaceFolder}/main/**",
+        "${workspaceFolder}/build/config",
+        "/Users/mac/esp/esp-idf/components/**",
+        "/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include"
+    ],
+    "C_Cpp.default.browse": {
+        "path": [
+            "${workspaceFolder}",
+            "/Users/mac/esp/esp-idf/components",
+            "/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/xtensa-esp-elf/include"
+        ],
+        "limitSymbolsToIncludedHeaders": false
+    },
+    "C_Cpp.default.defines": [
+        "ESP_PLATFORM",
+        "IDF_VER=\"v5.5-dev-1998-gc71d74e2f8\"",
+        "SOC_MMU_PAGE_SIZE=CONFIG_MMU_PAGE_SIZE",
+        "SOC_XTAL_FREQ_MHZ=CONFIG_XTAL_FREQ",
+        "_GNU_SOURCE"
+    ],
+    
+    // 文件关联和格式化
+    "files.associations": {
+        "*.h": "c",
+        "*.c": "c",
+        "*.hpp": "cpp",
+        "*.cpp": "cpp",
+        "sdkconfig": "ini",
+        "sdkconfig.*": "ini",
+        "Kconfig*": "kconfig"
+    },
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    
+    // 项目特定设置
+    "search.exclude": {
+        "**/build": true,
+        "**/.git": true,
+        "**/managed_components": true
+    },
+    "files.exclude": {
+        "**/.git": true,
+        "**/build": true,
+        "**/.DS_Store": true
+    },
+    
+    // 终端配置
+    "terminal.integrated.env.osx": {
+        "IDF_PATH": "/Users/mac/esp/esp-idf",
+        "PATH": "/Users/mac/.espressif/python_env/idf5.5_py3.13_env/bin:/Users/mac/.espressif/tools/xtensa-esp-elf/esp-14.2.0_20241119/xtensa-esp-elf/bin:/Users/mac/.espressif/tools/openocd-esp32/v0.12.0-esp32-20240821/openocd-esp32/bin:${env:PATH}"
+    }
+}

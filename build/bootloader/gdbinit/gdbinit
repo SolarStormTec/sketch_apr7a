@@ -1,0 +1,2 @@
+source /Users/mac/Documents/Arduino/sketch_apr7a/build/bootloader/gdbinit/symbols
+source /Users/mac/Documents/Arduino/sketch_apr7a/build/bootloader/gdbinit/connect
