@@ -58,15 +58,8 @@ esp_err_t wifi_manager_init(void)
         goto cleanup;
     }
     
-    // 初始化网络接口
-    ESP_ERROR_CHECK(esp_netif_init());
-    
-    // 创建默认事件循环（如果尚未创建）
-    esp_err_t ret = esp_event_loop_create_default();
-    if (ret != ESP_OK && ret != ESP_ERR_INVALID_STATE) {
-        ESP_LOGE(TAG, "创建默认事件循环失败: %s", esp_err_to_name(ret));
-        goto cleanup;
-    }
+    // 网络接口和事件循环在早期初始化阶段已创建
+    esp_err_t ret;
     
     // 创建STA和AP网络接口
     g_wifi_mgr.sta_netif = esp_netif_create_default_wifi_sta();
@@ -422,8 +415,8 @@ static void wifi_event_handler(void* arg, esp_event_base_t event_base,
             // 发送系统事件
             event_message_t sys_event = {
                 .type = EVENT_WIFI_CONNECTED,
-                .data = NULL,  // 简化事件数据处理
-                .data_len = sizeof(wifi_signal_level_t),
+                .data = NULL,
+                .data_len = 0,
                 .timestamp = esp_timer_get_time() / 1000
             };
             event_system_post(&sys_event);
